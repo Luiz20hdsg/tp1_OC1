@@ -7,12 +7,12 @@ tamanho_vetor: .word 4
 
 ##### END MODIFIQUE AQUI END #####
 
-.text
+.text                # parametros
 la t2, vetor         # Endereço do vetor
 lw t3, tamanho_vetor # Tamanho do vetor
 
 jal x1, contador
-addi x14, x0, 2 # utilizado para correção
+addi x14, x0, 2 # utilizado para correção, moficar aqui para verificar a quantidade de numeros impares e pares
 beq x14, x10, FIM # Verifica # de pares
 beq x14, x11, FIM # Verifica # de ímpares
 
